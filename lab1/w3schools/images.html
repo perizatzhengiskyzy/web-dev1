@@ -1,0 +1,121 @@
+<img src="url" alt="alternatetext">
+
+<!--The required src attribute specifies the path (URL) to the image.-->
+<img src="img_chania.jpg" alt="Flowers in Chania">
+
+<!--If a browser cannot find an image, it will display the value of the alt attribute-->
+<img src="wrong.jpg" alt="Flowers in Chania">
+
+<!--You can use the style attribute to specify the width and height of an image.-->
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+
+<!--Alternatively, you can use the width and height attributes:-->
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+<!--The style attribute is used to specify the width and height of the image.-->
+<img src="img_chania.jpg" alt="Flowers in Chania" style="width:460px;height:345px;">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+<!--we suggest using the style attribute. It prevents styles sheets from changing the size of images:-->
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+</body>
+</html>
+
+
+<!--If you have your images in a sub-folder, you must include the folder name in the src attribute:-->
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<!--To point to an image on another server, you must specify an absolute (full) URL in the src attribute:-->
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+<!--HTML allows GIFs-->
+<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+
+<!--To use an image as a link, put the <img> tag inside the <a> tag:-->
+<a href="default.asp">
+    <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<!--Use the CSS float property to let the image float to the right or to the left of a text-->
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+   
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p>
+
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<!--The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.-->
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+<!--The image is inserted using the <img> tag. The only difference from other images is that you must add a usemap attribute:-->
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<!--Also we can have poly which contains one or more points:-->
+<area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+
+<!--Add a background image on a <p> element:-->
+<p style="background-image: url('img_girl.jpg');">
+
+<!--To avoid the background image from repeating itself, set the background-repeat property to no-repeat.-->
+<style>
+    body {
+        background-image: url('example_img_girl.jpg');
+        background-repeat: no-repeat;
+    }
+</style>
+        
+<!--If you want the background image to cover the entire element, you can set the background-size property to cover.-->
+<style>
+    body {
+        background-image: url('example_img_girl.jpg');
+        background-size: cover;
+    }
+</style>
+
+<!--Also, to make sure the entire element is always covered, set the background-attachment property to fixed:-->
+<style>
+    body {
+        background-image: url('example_img_girl.jpg');
+        background-attachment: fixed;
+    }
+</style>
+<!--This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions):-->
+<style>
+    body {
+        background-image: url('example_img_girl.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
+
+<!--
+The HTML <picture> element gives web developers more flexibility in specifying image resources.
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+Each <source> element has a media attribute that defines when the image is the most suitable.
+-->
+
+<picture>
+    <source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 465px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg">
+  </picture>

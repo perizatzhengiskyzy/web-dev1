@@ -1,0 +1,56 @@
+<!--The <div> element is often used to group sections of a web page together.-->
+    <div>
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+        <p>London has over 9 million inhabitants.</p>
+      </div>
+
+<!--If you have a <div> element that is not 100% wide, and you want to center-align it, set the CSS margin property to auto.-->
+    <style>
+        div {
+          width:300px;
+          margin:auto;
+        }
+    </style>
+
+<!--How to use grid to align <div> elements side by side:-->
+
+    <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+    }
+    </style>
+
+<!--How to use flex to align div elements side by side:-->
+
+<style>
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+</style>
+
+<!--How to use display: inline-block to align div elements side by side:-->
+
+<style>
+div {
+  width: 30%;
+  display: inline-block;
+}
+</style>
+
+<!--How to use float to align div elements side by side:-->
+
+<style>
+.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+.mycontainer div {
+  width:33%;
+  float:left;
+}
+</style>

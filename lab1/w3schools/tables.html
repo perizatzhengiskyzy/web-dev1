@@ -1,0 +1,123 @@
+<!--HTML tables allow web developers to arrange data into rows and columns.-->
+
+<table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table>
+
+<!--td stands for table data.-->
+<table>
+    <tr>
+      <td>Emil</td>
+      <td>Tobias</td>
+      <td>Linus</td>
+    </tr>
+  </table>
+
+<!--Each table row starts with a <tr> and ends with a </tr> tag.-->
+<!--You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row.-->
+<!--Sometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag-->
+    <table>
+        <tr>
+          <th>Person 1</th>
+          <th>Person 2</th>
+          <th>Person 3</th>
+        </tr>
+        <tr>
+          <td>Emil</td>
+          <td>Tobias</td>
+          <td>Linus</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>14</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+<!--To add a border, use the CSS border property on table, th, and td elements:-->
+table, th, td {
+    border: 1px solid black;
+}
+<!--To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.-->
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+<!--With the border-style property, you can set the appearance of the border.-->
+th, td {
+    border-style: dotted;
+}
+th, td {
+    border-color: #96D4D4;
+}
+
+<!--Set the width of the table to 100%:-->
+<table style="width:100%"></table>
+
+<!--To use the first column as table headers, define the first cell in each row as a <th> element:-->
+    <table>
+        <tr>
+          <th>Firstname</th>
+          <td>Jill</td>
+          <td>Eve</td>
+        </tr>
+        <tr>
+          <th>Lastname</th>
+          <td>Smith</td>
+          <td>Jackson</td>
+        </tr>
+        <tr>
+          <th>Age</th>
+          <td>94</td>
+          <td>50</td>
+        </tr>
+      </table>
+
+<!--To align the table headers, use the CSS text-align property:-->
+text-align:left;
+
+<!--You can have a header that spans over two or more columns.-->
+<!--To do this, use the colspan attribute on the <th> element:-->
+    <table>
+        <tr>
+          <th colspan="2">Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+      </table>
+
+<!--To add a caption to a table, use the <caption> tag:-->
+
+<!--To change the space between table cells, use the CSS border-spacing property on the table element:-->
+table {
+    border-spacing: 30px;
+}
+
+<!--To style every other table row element, use the :nth-child(even) (or odd) selector like this:-->
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
+
