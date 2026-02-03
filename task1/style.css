@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background: #f0f2f5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em; /* Увеличиваем базовый размер шрифта */
+} 
+a{
+    text-decoration: none;
+}
+.container .left img{
+    width: 450px; /* Было 300px */
+    margin: -8px; /* Было -5px */
+}
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    max-width: 1590px; /* Было 1060px */
+    margin-inline: auto;
+    padding: 0 60px; /* Было 0 40px */
+    gap: 120px; /* Было 80px */
+}
+.container .left{
+    margin-top: -180px; /* Было -120px */
+}
+h2{
+    font-weight: normal;
+    margin-top: 24px; /* Было 16px */
+    line-height: 1.3;
+    font-size: 36px; /* Было 24px */
+}
+.container .right{
+    text-align: center;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    gap: 21px; /* Было 14px */
+}
+.form-container{
+    padding: 24px; /* Было 16px */
+    border-radius: 12px; /* Было 8px */
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0, 0, 0.1), 0 12px 24px rgba(0,0,0,0.1); /* Увеличили тень */
+    width: 594px; /* Было 396px */
+    margin-bottom: 45px; /* Было 30px */
+}
+
+form input{
+    padding: 24px; /* Было 16px */
+    border-radius: 12px; /* Было 8px */
+    font-size: 24px; /* Было 16px */
+    border: 1.5px solid #dddfe2; /* Было 1px */
+    font-family: Arial, Helvetica, sans-serif;
+}
+form input:focus::placeholder{
+    color:#a9a9a9;
+}
+form input:focus{
+    outline: 1.5px solid #1877f2; /* Было 1px */
+}
+form a{
+    font-size: 21px; /* Было 14px */
+    text-decoration: none;
+    color: #1877f2;
+    padding-bottom: 30px; /* Было 20px */
+    margin-bottom: 30px; /* Было 20px */
+    border-bottom: 1.5px solid #dddfe2; /* Было 1px */
+}
+.btn{
+    background: #1877f2;
+    color:#fff;
+    border:none;
+    padding: 18px; /* Было 12px */
+    border-radius: 12px; /* Было 8px */
+    font-size: 30px; /* Было 20px */
+    font-weight: 500px;
+    cursor: pointer;
+}
+.btn-green{
+    background: #42b72a;
+    width: 525px; /* Было 350px */
+    margin: -15px auto 15px; /* Было -10px auto 10px */
+    color: #fff;
+    border: none;
+    padding: 18px; /* Было 12px */
+    border-radius: 12px; /* Было 8px */
+    font-size: 30px; /* Было 20px */
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-green:hover{
+    background: #3ca727;
+}
+.right p{
+    font-size: 21px; /* Было 14px */
+}
+.right p a{
+    color:black;
+    font-size: 24px; /* Было 16px */
+}
+
+@media(max-width: 1350px){ /* Было 900px, увеличили пропорционально */
+    .container{
+        flex-direction: column;
+        text-align: center;
+        gap:30px; /* Было 20px */
+    }
+    h2{
+        font-size: 36px; /* Было 24px */
+        width: 600px; /* Было 400px */
+        line-height: 1.3;
+    }
+    .container .left{
+        margin-top: 60px; /* Было 40px */
+    }
+    .form-container{
+        width: 90%;
+        max-width: 594px; /* Соответствует увеличенному размеру */
+    }
+    .btn-green{
+        width: 90%;
+        max-width: 525px; /* Соответствует увеличенному размеру */
+    }
+}
