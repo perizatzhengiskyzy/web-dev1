@@ -1,0 +1,46 @@
+.main{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    background-color: #F5F1EB;
+    color: #3E2F23;
+}
+.categories{
+  display: flex;
+  gap: 10px;
+}
+.categories button{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  width:max-content;
+  margin-right: 10px;
+  padding: 8px 15px;
+  border: 3px;
+  border-radius: 7px;
+  border: 1px solid #C2A47E;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.categories button:hover {
+  background-color: #C2A47E;
+  color: white;
+}
+.categories button.active {
+  background-color: #C2A47E;
+  color: white;
+}
+h3 {
+  cursor: pointer;        
+  user-select: none;      
+}
+h3:hover{
+  color: #07488ec3;
+  text-decoration: underline;
+
+}
+.NotSelected {
+  display: flex;
+  justify-content: center;   
+  align-items: center; 
+  height: 200px;
+}

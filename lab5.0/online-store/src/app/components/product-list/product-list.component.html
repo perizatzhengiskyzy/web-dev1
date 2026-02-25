@@ -1,0 +1,10 @@
+@if (products.length > 0 ){
+    <div class="gridClass">
+    @for(p of products ; track p.id){
+        <app-product-item 
+        [product] = p 
+        (delete) = "removeProduct($event)">
+        </app-product-item>
+    }
+    </div>
+} @else {<p>No products in thiscategory</p>}

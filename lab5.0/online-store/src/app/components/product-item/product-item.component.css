@@ -1,0 +1,142 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.product-card h3 {
+  margin: 10px 0;
+}
+
+.product-card p {
+  margin: 6px 0;
+}
+.gallery-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+.mainImage{
+    position:relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.product-main-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.nav-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.nav-button:hover {
+  background: #C2A47E;
+  color: white;
+}
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+button {
+    flex: 1;
+    width:max-content;
+    height: 30px;
+    margin-right: 8px;
+    margin-top: 8px;
+    color:wheat;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    background-color: cadetblue;
+    border:none;
+    border-radius: 7px;
+}
+.like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.likeDelete button {
+  background-color: #C2A47E;
+  color: white;
+}
+
+.likeDelete button:last-child:hover {
+  opacity: 0.8;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.share button {
+  background-color: #E8DFD5;
+  color: #fff;
+}
+
+.share button:hover {
+  background-color: #C2A47E;
+  color: white;
+}
+.thumbnail-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+.thumbnail.active {
+  border: 2px solid #C2A47E;
+  opacity: 1;
+}
+

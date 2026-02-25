@@ -1,0 +1,39 @@
+<div class="product-card">
+    <div class="gallery-container">
+        <div class="mainImage">
+            <img [src]="product.image" alt="{{ product.name }}" width="200"  class="product-main-image">
+            <button class="nav-button prev" (click)="prevImage($event)">❮</button> 
+            <button class="nav-button next" (click)="nextImage($event)">❯</button> 
+        </div>
+    @if(product.images.length>0){
+        <div class="thumbnail-row">
+            @for(img of product.images; track $index ; let i = $index){
+            <img [src]="img"  [class.active]="i==currentImageIndex"
+            (click)="setMainImage(img)" class="thumbnail">
+        }
+        </div>
+   }
+   </div>
+   
+
+  <h3>{{ product.name }}</h3>
+
+  <p>{{ product.description }}</p>
+
+  <p><strong>Price:</strong> {{ product.price }} ₸</p>
+
+  <p><strong>Rating:</strong> ⭐ {{ product.rating }}</p>
+
+  <p><strong>Likes:  </strong>  {{ product.likes }} <button (click)="likeProduct()" class="like">❤️ </button></p>
+    <div class="buttons">
+        <div class="likeDelete">
+            <button (click)="likeProduct()">Like</button>
+            <button (click)="deleteProduct()">Delete</button>  
+        </div>
+        <div class="share">
+            <button (click)="shareWhatsApp()">Share WhatsApp</button>
+            <button (click)="shareTelegram()">Share Telegram</button>
+        </div>
+    </div>
+
+</div>

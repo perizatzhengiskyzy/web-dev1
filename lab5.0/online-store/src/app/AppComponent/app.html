@@ -1,0 +1,21 @@
+<div class="main">
+  <h3 (click)="mainPage()">Welcome to My-Shop!</h3>
+  <div class="categories">
+    @for(cat of categories; track cat.id){
+      <button (click)="selectCategory(cat.id)" [class.active]="cat.id === selectedCategoryID">
+        {{cat.name}}
+      </button>
+    }
+  </div>
+  <hr>
+  @if(!selectedCategoryID){
+    <div class="NotSelected">
+      <p>Please select a category</p>
+    </div>
+  }
+  @if(selectedCategoryID){
+    <div class="gridClass">
+    <app-product-list [products]="selectedProducts"></app-product-list>
+    </div>
+  }
+</div>

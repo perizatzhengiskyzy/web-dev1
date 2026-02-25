@@ -1,0 +1,11 @@
+p {
+  font-weight: bold;
+  color: gray;
+}
+.gridClass {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: stretch; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
