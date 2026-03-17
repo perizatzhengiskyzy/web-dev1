@@ -1,0 +1,41 @@
+<div *ngIf="loading" class="loading">
+  Loading album details...
+</div>
+
+<div *ngIf="error" class="error">
+  <p>Failed to load album. Please try again.</p>
+  <button (click)="loadAlbum()" class="retry-btn">Retry</button>
+  <button (click)="goBack()" class="back-btn">← Back to Albums</button>
+</div>
+
+<div class="container" *ngIf="album">
+  <h2>Album Details</h2>
+  
+  <div class="album-info">
+    <p><strong>ID:</strong> {{ album.id }}</p>
+    <p><strong>User ID:</strong> {{ album.userId }}</p>
+    
+    <div class="edit-section">
+      <label for="title"><strong>Title:</strong></label>
+      <input 
+        id="title"
+        type="text" 
+        [(ngModel)]="editedTitle" 
+        class="title-input"
+        placeholder="Enter album title"
+      >
+      <button 
+        (click)="saveTitle()" 
+        class="save-btn"
+        [disabled]="!editedTitle.trim()"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button (click)="goBack()" class="back-btn">← Back to Albums</button>
+    <a [routerLink]="['/albums', album.id, 'photos']" class="photos-btn">View Photos →</a>
+  </div>
+</div>

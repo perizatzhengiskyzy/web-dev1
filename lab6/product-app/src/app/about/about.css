@@ -1,0 +1,41 @@
+body {
+  background-image: url('https://i.pinimg.com/736x/41/70/09/417009ad483606ed17a18cd5293fa06c.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 20px;
+}
+
+.about-container h1 {
+  color: white; 
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+
+.info-card {
+  background-color: rgba(245, 245, 245, 0.9); 
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.info-card p {
+  margin: 10px 0;
+  color: #333; 
+}

@@ -180,4 +180,8 @@ shareTelegram(link: string, name: string) {
   const url = `https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(name)}`;
   window.open(url, '_blank');
 }
+
+sortByRating() {
+  this.products = [...this.products].sort((a, b) => b.rating - a.rating);
+}
 }
