@@ -1,4 +1,4 @@
-from lab7.task2.Vehicle import Vehicle
+from Vehicle import Vehicle
 
 
 class ElectricCar(Vehicle):

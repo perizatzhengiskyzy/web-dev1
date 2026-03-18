@@ -1,4 +1,4 @@
-from lab7.task2.Vehicle import Vehicle
+from Vehicle import Vehicle
 class Truck(Vehicle):
     def __init__(self, brand, capacity):
         super().__init__(brand)
