@@ -88,8 +88,31 @@
 # print(len(result))
 
 # 9
-# a = int(input())
-# b = int(input())
-# c = int(input())
-# print(pow(a,b))
-# print(pow(a,b,c))
+# n = int(input())
+#stamps = set()
+
+#for _ in range(n):
+#    country = input().strip()
+#    stamps.add(country)
+
+#print(len(stamps))
+
+# 10
+#def print_formatted(number):
+#    width = len(bin(number)[2:])  # длина бинарного числа
+#    
+#    for i in range(1, number + 1):
+#        dec = str(i)
+#        octal = oct(i)[2:]
+#        hexa = hex(i)[2:].upper()
+#        binary = bin(i)[2:]
+#        
+#        print(dec.rjust(width), 
+#              octal.rjust(width), 
+#              hexa.rjust(width), 
+#              binary.rjust(width))
+
+
+#if __name__ == '__main__':
+#    n = int(input())
+#    print_formatted(n)
