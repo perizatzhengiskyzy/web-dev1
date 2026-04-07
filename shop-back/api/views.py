@@ -18,3 +18,15 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(is_active=True)
     serializer_class = ProductSerializer
+    
+    # Удаление неактивных продуктов
+    @action(detail=False, methods=['delete'])
+    def delete_inactive(self, request):
+        #Удалить все неактивные продукты
+        inactive_products = Product.objects.filter(is_active=False)
+        count = inactive_products.count()
+        inactive_products.delete()
+        return Response({
+            'message': f'Successfully deleted {count} inactive products',
+            'deleted_count': count
+        })
