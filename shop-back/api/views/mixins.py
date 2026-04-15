@@ -1,11 +1,14 @@
 from rest_framework import mixins, generics
+
 from api.models import Product
 from api.serializers import ProductSerializer
 
 
-class ProductListAPIView(mixins.ListModelMixin,
-                         mixins.CreateModelMixin,
-                         generics.GenericAPIView):
+class ProductListAPIView(
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    generics.GenericAPIView
+):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -16,10 +19,12 @@ class ProductListAPIView(mixins.ListModelMixin,
         return self.create(request, *args, **kwargs)
 
 
-class ProductDetailAPIView(mixins.RetrieveModelMixin,
-                           mixins.UpdateModelMixin,
-                           mixins.DestroyModelMixin,
-                           generics.GenericAPIView):
+class ProductDetailAPIView(
+    mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    generics.GenericAPIView
+):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_url_kwarg = 'product_id'

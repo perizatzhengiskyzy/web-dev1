@@ -1,14 +1,14 @@
 from rest_framework import serializers
-from .models import Category, Product
+from api.models import Product, Category
+
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['id', 'name']
+        fields = '__all__'
+
 
 class ProductSerializer(serializers.ModelSerializer):
-    category_name = serializers.ReadOnlyField(source='category.name')
-    
     class Meta:
         model = Product
-        fields = ['id', 'name', 'price', 'description', 'count', 'is_active', 'category', 'category_name']
+        fields = '__all__'
